@@ -3,7 +3,7 @@
 This application is written to run on a Raspberry Pi 3 coupled to an [A-Star 32U4 Robot Controller](http://www.pololu.com/product/3117/), an Arduino motor controller that has I/O pins to fit to a Raspberry Pi.
 
 ### A note about compatability
-The [i2c-bus](https://github.com/fivdi/i2c-bus) node module will only run on specific architectures, primarily the Raspberry Pi. If attempting to run this application on a different OS, this module will throw the following error `Error: Module did not self-register`. See [Testing without Raspberry Pi / A-Star 32U4](#no_pi) section below for more information.
+The [i2c-bus](https://github.com/fivdi/i2c-bus) node module will only run on specific architectures, primarily the Raspberry Pi. If attempting to run this application on a different OS, this module will throw the following error `Error: Module did not self-register`. See [Testing without Raspberry Pi / A-Star 32U4](#testing-without-raspberry-pi--a-star-32u4) section below for more information.
 
 ## Description
 
@@ -38,7 +38,7 @@ Once the server has launched, the LED lights on the A-Star will blink once to in
 `util/set_motors.js` -- Stops the motors. During initial development, connection interruptions with the mobile device would occasionally cause the motors to continue spinning with no way to stop them. This utility was created to do so. In subsequent versions, motors are now set to 0 when the mobile device disconnects.
 
 
-## Testing without Raspberry Pi / A-Star 32U4 <a id="no_pi"></a>
+## Testing without Raspberry Pi / A-Star 32U4
 
 * The i2c-bus node module will only run on specific architectures, primarily the Raspberry Pi.
 * The i2c-bus module will throw an error upon init if there is no device connected to 
