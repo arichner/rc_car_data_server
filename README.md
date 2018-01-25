@@ -3,6 +3,8 @@ NODE.js RcCar Motor Controller and Data Server
 
 This application is written to run on a Raspberry Pi 3 coupled to an [A-Star 32U4 Robot Controller](http://www.pololu.com/product/3117/), an Arduino motor controller that has I/O pins to fit to a Raspberry Pi.
 
+PLEASE NOTE: The [i2c-bus](https://github.com/fivdi/i2c-bus) node module will only run on specific architectures, primarily the Raspberry Pi. If attempting to run this application on a different OS, this module will throw the following error `Error: Module did not self-register`. See [Testing without Raspberry Pi / A-Star 32U4](#no_pi) section below for more information.
+
 It is part of a system that allows a user to control a RC Car using a mobile device. A standard, toy-quality RC Car is modified to accommodate the Raspberry Pi / A-Star. The motors from the RC Car should be wired directly to the A-Star motor controller. 
 
 Video is streamed from the Raspberry Pi to the mobile device using the [UV4L](https://www.linux-projects.org/uv4l/) library. 
@@ -37,7 +39,7 @@ Utilities
 `util/set_motors.js` -- Stops the motors. During initial development, connection interruptions with the mobile device would occasionally cause the motors to continue spinning with no way to stop them. This utility was created to do so. In subsequent versions, motors are now set to 0 when the mobile device disconnects.
 
 
-Testing without Raspberry Pi / A-Star 32U4
+Testing without Raspberry Pi / A-Star 32U4 <a id="no_pi"></a>
 ------------------------------------------
 
 * The i2c-bus node module will only run on specific architectures, primarily the Raspberry Pi.
