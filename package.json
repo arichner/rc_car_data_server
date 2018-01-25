@@ -1,0 +1,26 @@
+{
+  "name": "data_server",
+  "version": "0.0.1",
+  "description": "data server component for RPi controlled RC Car",
+  "main": "RcController",
+  "dependencies": {
+    "i2c-bus": "^1.2.1",
+    "python-struct": "^1.0.4",
+    "sleep": "^5.1.1",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.jsq"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.umn.edu:arichner/data_server.git"
+  },
+  "keywords": [
+    "rc",
+    "car"
+  ],
+  "author": "Aaron Richner <awrichner@gmail.com>",
+  "license": "GPL"
+}
